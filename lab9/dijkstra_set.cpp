@@ -26,7 +26,7 @@ void Graph::addEdge(int u, int v, int w) {
 
 void Graph::shortestPath(int s) {
     set< pair<int, int> > setds;
- 
+ 	int src=s;
     vector<int> dist(V, INF);
  
     setds.insert(make_pair(0, src));
@@ -59,6 +59,7 @@ void Graph::shortestPath(int s) {
         printf("%d \t\t %d\n", i, dist[i]);
 }
 
+/*
 void Graph::printGraph() {
 	for(int i = 0; i < (this->V); i ++) {
 		printf("%d ->",i);
@@ -69,6 +70,8 @@ void Graph::printGraph() {
 	}
 }
 
+
+*/
 int main() {
 	//Vertices and edges in the graph
 	int v, e;
@@ -86,7 +89,7 @@ int main() {
 
 	g.shortestPath(0);
 
-	g.printGraph();
+	//g.printGraph();
 
 	return 0;
 }
